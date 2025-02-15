@@ -4,6 +4,10 @@ on:
     types:
       - opened
       - closed
+  push:
+    branches:
+      - master
+      - 'dev**'
 jobs:
   deploy:
     runs-on: ubuntu-latest
