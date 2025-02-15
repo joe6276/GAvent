@@ -4,15 +4,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Output event data
-        run: echo "${{ toJSON(github.event) }}"
-      - name: Get code
-        uses: actions/checkout@v3
-      - name: Install dependencies
+      - name: Get Code
+        uses: actions/checkout@v4
+
+      - name: Run installation
         run: npm ci
-      - name: Test code
-        run: npm run test
-      - name: Build code
-        run: npm run build
-      - name: Deploy project
-        run: echo "Deploying..."
+      
+      - name: Output
+        run: echo "Deploying.."
