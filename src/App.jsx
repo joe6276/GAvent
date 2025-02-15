@@ -5,9 +5,9 @@ function App() {
   return (
     <>
       <header>
-        <div id="logo-img">
+        <main id="logo-img">
           <img src={logo} />
-        </div>
+        </main>
         <h1>Learn & Master GitHub Actions</h1>
       </header>
       <MainContent />
